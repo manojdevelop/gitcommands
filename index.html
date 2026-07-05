@@ -1,185 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn Git Commands</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-        .content {
-            padding: 40px;
-        }
-        .command-section {
-            margin-bottom: 30px;
-            border-left: 4px solid #667eea;
-            padding-left: 20px;
-        }
-        .command-section h2 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.5em;
-        }
-        .command-section p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-        .code-block {
-            background: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
-            color: #333;
-            overflow-x: auto;
-        }
-        .example {
-            background: #fffbf0;
-            border-left: 3px solid #ffa500;
-            padding: 10px 15px;
-            margin: 10px 0;
-            border-radius: 3px;
-        }
-        .example strong {
-            color: #ffa500;
-        }
-        footer {
-            background: #f5f5f5;
-            padding: 20px;
-            text-align: center;
-            color: #777;
-            border-top: 1px solid #ddd;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+      header p {
+        font-size: 1.1em;
+        opacity: 0.9;
+      }
+      .content {
+        padding: 40px;
+      }
+      .command-section {
+        margin-bottom: 30px;
+        border-left: 4px solid #667eea;
+        padding-left: 20px;
+      }
+      .command-section h2 {
+        color: #667eea;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+      }
+      .command-section p {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+      .code-block {
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+        font-family: "Courier New", monospace;
+        color: #333;
+        overflow-x: auto;
+      }
+      .example {
+        background: #fffbf0;
+        border-left: 3px solid #ffa500;
+        padding: 10px 15px;
+        margin: 10px 0;
+        border-radius: 3px;
+      }
+      .example strong {
+        color: #ffa500;
+      }
+      footer {
+        background: #f5f5f5;
+        padding: 20px;
+        text-align: center;
+        color: #777;
+        border-top: 1px solid #ddd;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>🚀 Learn Git Commands</h1>
-            <p>Master the essential Git commands for version control</p>
-        </header>
+      <header>
+        <h1>🚀 Learn Git Commands</h1>
+        <p>Master the essential Git commands for version control</p>
+      </header>
 
-        <div class="content">
-            <!-- Setup Commands -->
-            <div class="command-section">
-                <h2>Setup & Configuration</h2>
-                <p>Configure your Git identity and preferences:</p>
-                <div class="code-block">git config --global user.name "Your Name"</div>
-                <div class="code-block">git config --global user.email "your@email.com"</div>
-                <div class="example"><strong>Example:</strong> Set your Git user information for commits</div>
-            </div>
-
-            <!-- Basic Commands -->
-            <div class="command-section">
-                <h2>Basic Commands</h2>
-                <p><strong>Initialize a repository:</strong></p>
-                <div class="code-block">git init</div>
-                <p><strong>Clone a repository:</strong></p>
-                <div class="code-block">git clone &lt;repository-url&gt;</div>
-                <div class="example"><strong>Example:</strong> git clone https://github.com/user/repo.git</div>
-            </div>
-
-            <!-- Staging & Commit -->
-            <div class="command-section">
-                <h2>Staging & Committing</h2>
-                <p><strong>Check status:</strong></p>
-                <div class="code-block">git status</div>
-                <p><strong>Stage files:</strong></p>
-                <div class="code-block">git add &lt;filename&gt;        # Add specific file</div>
-                <div class="code-block">git add .              # Add all changes</div>
-                <p><strong>Commit changes:</strong></p>
-                <div class="code-block">git commit -m "Commit message"</div>
-                <div class="example"><strong>Example:</strong> git commit -m "Fix: resolved login bug"</div>
-            </div>
-
-            <!-- Branching -->
-            <div class="command-section">
-                <h2>Branching</h2>
-                <p><strong>Create and switch branches:</strong></p>
-                <div class="code-block">git branch &lt;branch-name&gt;           # Create branch</div>
-                <div class="code-block">git checkout &lt;branch-name&gt;        # Switch branch</div>
-                <div class="code-block">git checkout -b &lt;branch-name&gt;     # Create and switch</div>
-                <p><strong>List branches:</strong></p>
-                <div class="code-block">git branch              # Local branches</div>
-                <div class="code-block">git branch -a           # All branches</div>
-            </div>
-
-            <!-- Remote Operations -->
-            <div class="command-section">
-                <h2>Remote Operations</h2>
-                <p><strong>Push and pull changes:</strong></p>
-                <div class="code-block">git push origin &lt;branch-name&gt;     # Push to remote</div>
-                <div class="code-block">git pull origin &lt;branch-name&gt;     # Pull from remote</div>
-                <p><strong>View remotes:</strong></p>
-                <div class="code-block">git remote -v</div>
-            </div>
-
-            <!-- Merging & Rebasing -->
-            <div class="command-section">
-                <h2>Merging & Rebasing</h2>
-                <p><strong>Merge branches:</strong></p>
-                <div class="code-block">git merge &lt;branch-name&gt;</div>
-                <p><strong>Rebase:</strong></p>
-                <div class="code-block">git rebase &lt;branch-name&gt;</div>
-                <div class="example"><strong>Example:</strong> git merge develop (merge develop into current branch)</div>
-            </div>
-
-            <!-- History & Logs -->
-            <div class="command-section">
-                <h2>History & Logs</h2>
-                <p><strong>View commit history:</strong></p>
-                <div class="code-block">git log                 # View all commits</div>
-                <div class="code-block">git log --oneline       # Condensed view</div>
-                <div class="code-block">git diff                # Show unstaged changes</div>
-            </div>
-
-            <!-- Undo Changes -->
-            <div class="command-section">
-                <h2>Undo Changes</h2>
-                <p><strong>Revert changes:</strong></p>
-                <div class="code-block">git restore &lt;filename&gt;        # Discard changes</div>
-                <div class="code-block">git restore --staged &lt;filename&gt;  # Unstage file</div>
-                <div class="code-block">git revert &lt;commit-hash&gt;        # Create new commit that undoes changes</div>
-                <div class="code-block">git reset --hard &lt;commit-hash&gt;   # Reset to specific commit</div>
-            </div>
+      <div class="content">
+        <!-- Setup Commands -->
+        <div class="command-section">
+          <h2>Setup & Configuration</h2>
+          <p>Configure your Git identity and preferences:</p>
+          <div class="code-block">
+            git config --global user.name "Your Name"
+          </div>
+          <div class="code-block">
+            git config --global user.email "your@email.com"
+          </div>
+          <div class="example">
+            <strong>Example:</strong> Set your Git user information for commits
+          </div>
         </div>
 
-        <footer>
-            <p>&copy; 2026 Git Learning Tutorial | Master Version Control</p>
-        </footer>
+        <!-- Basic Commands -->
+        <div class="command-section">
+          <h2>Basic Commands</h2>
+          <p><strong>Initialize a repository:</strong></p>
+          <div class="code-block">git init</div>
+          <p><strong>Clone a repository:</strong></p>
+          <div class="code-block">git clone &lt;repository-url&gt;</div>
+          <div class="example">
+            <strong>Example:</strong> git clone https://github.com/user/repo.git
+          </div>
+        </div>
+
+        <!-- Staging & Commit -->
+        <div class="command-section">
+          <h2>Staging & Committing</h2>
+          <p><strong>Check status:</strong></p>
+          <div class="code-block">git status</div>
+          <p><strong>Stage files:</strong></p>
+          <div class="code-block">
+            git add &lt;filename&gt; # Add specific file
+          </div>
+          <div class="code-block">git add . # Add all changes</div>
+          <p><strong>Commit changes:</strong></p>
+          <div class="code-block">git commit -m "Commit message"</div>
+          <div class="example">
+            <strong>Example:</strong> git commit -m "Fix: resolved login bug"
+          </div>
+        </div>
+
+        <!-- Branching -->
+        <div class="command-section">
+          <h2>Branching</h2>
+          <p><strong>Create and switch branches:</strong></p>
+          <div class="code-block">
+            git branch &lt;branch-name&gt; # Create branch
+          </div>
+          <div class="code-block">
+            git checkout &lt;branch-name&gt; # Switch branch
+          </div>
+          <div class="code-block">
+            git checkout -b &lt;branch-name&gt; # Create and switch
+          </div>
+          <p><strong>List branches:</strong></p>
+          <div class="code-block">git branch # Local branches</div>
+          <div class="code-block">git branch -a # All branches</div>
+        </div>
+
+        <!-- Remote Operations -->
+        <div class="command-section">
+          <h2>Remote Operations</h2>
+          <p><strong>Push and pull changes:</strong></p>
+          <div class="code-block">
+            git push origin &lt;branch-name&gt; # Push to remote
+          </div>
+          <div class="code-block">
+            git pull origin &lt;branch-name&gt; # Pull from remote
+          </div>
+          <p><strong>View remotes:</strong></p>
+          <div class="code-block">git remote -v</div>
+        </div>
+
+        <!-- Merging & Rebasing -->
+        <div class="command-section">
+          <h2>Merging & Rebasing</h2>
+          <p><strong>Merge branches:</strong></p>
+          <div class="code-block">git merge &lt;branch-name&gt;</div>
+          <p><strong>Rebase:</strong></p>
+          <div class="code-block">git rebase &lt;branch-name&gt;</div>
+          <div class="example">
+            <strong>Example:</strong> git merge develop (merge develop into
+            current branch)
+          </div>
+        </div>
+
+        <!-- History & Logs -->
+        <div class="command-section">
+          <h2>History & Logs</h2>
+          <p><strong>View commit history:</strong></p>
+          <div class="code-block">git log # View all commits</div>
+          <div class="code-block">git log --oneline # Condensed view</div>
+          <div class="code-block">git diff # Show unstaged changes</div>
+        </div>
+
+        <!-- Undo Changes -->
+        <div class="command-section">
+          <h2>Undo Changes</h2>
+          <p><strong>Revert changes:</strong></p>
+          <div class="code-block">
+            git restore &lt;filename&gt; # Discard changes
+          </div>
+          <div class="code-block">
+            git restore --staged &lt;filename&gt; # Unstage file
+          </div>
+          <div class="code-block">
+            git revert &lt;commit-hash&gt; # Create new commit that undoes
+            changes
+          </div>
+          <div class="code-block">
+            git reset --hard &lt;commit-hash&gt; # Reset to specific commit
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; 2026 Git Learning Tutorial | Master Version Control</p>
+      </footer>
     </div>
-</body>
+    <h2>This is a temporary change</h2>
+  </body>
 </html>
